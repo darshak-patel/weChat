@@ -52,10 +52,12 @@
 
 	function getMessages() {
 		$.get("http://localhost:8080/messages", (data) => {
-			var messages = JSON.parse(data);
-			messages.forEach((element) => {
-				addMessages(element);
-			});
+			console.log(data);
+			data.forEach(addMessages);
+			// var messages = JSON.parse(data);
+			// messages.forEach((element) => {
+			// 	addMessages(element);
+			// });
 		});
 	}
 
